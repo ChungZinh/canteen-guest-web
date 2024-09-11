@@ -1,6 +1,7 @@
 import { TextInput } from "flowbite-react";
 import { useState } from "react";
 import { LuEye, LuEyeOff } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -49,9 +50,9 @@ export default function SignIn() {
 
             <div className="mt-4 text-sm">
               <span className="text-slate-400">Bạn chưa có tài khoản?</span>
-              <a href="/sign-up" className="text-slate-600">
-                Đăng ký
-              </a>
+              <Link to={"/sign-up"}>
+                <span className="text-slate-600">Đăng ký</span>
+              </Link>
             </div>
           </div>
         </form>

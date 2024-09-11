@@ -12,20 +12,20 @@ import SignUp from "./pages/SignUp";
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp/>} />
+          <Route path="/sign-up" element={<SignUp />} />
           <Route path="/collections" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
+        <FooterC />
       </BrowserRouter>
-      <FooterC />
     </>
   );
 }

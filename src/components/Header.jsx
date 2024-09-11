@@ -50,12 +50,14 @@ export default function Header() {
       >
         <div className="max-w-screen-2xl mx-auto">
           <Navbar fluid rounded>
-            <Navbar.Brand href="/">
-              <img
-                src={logo}
-                className="mr-3 h-12 sm:h-14"
-                alt="Flowbite React Logo"
-              />
+            <Navbar.Brand >
+              <Link to={"/"}>
+                <img
+                  src={logo}
+                  className="mr-3 h-12 sm:h-14"
+                  alt="Flowbite React Logo"
+                />
+              </Link>
             </Navbar.Brand>
 
             <div className="flex md:order-2 space-x-4 items-center">
@@ -97,28 +99,31 @@ export default function Header() {
               </Dropdown>
 
               {/* Login Button */}
-              <Button className="bg-slate-700" size={"sm"} href="/sign-in">
-                Đăng nhập
-              </Button>
+              <Link to="/sign-in">
+                <Button className="bg-slate-700" size={"sm"}>
+                  Đăng nhập
+                </Button>
+              </Link>
+
               <Navbar.Toggle />
             </div>
 
             {/* Navbar Links */}
             <Navbar.Collapse>
-              <Navbar.Link className="lg:text-base" href="/" active>
-                Trang chủ
+              <Navbar.Link className="lg:text-base" active>
+                <Link to={"/"}>Trang chủ</Link>
               </Navbar.Link>
-              <Navbar.Link className="lg:text-base" href="/collections">
-                Sản phẩm
+              <Navbar.Link className="lg:text-base">
+                <Link to={"/collections"}>Sản phẩm</Link>
               </Navbar.Link>
-              <Navbar.Link className="lg:text-base" href="/about">
-                Giới thiệu
+              <Navbar.Link className="lg:text-base">
+                <Link to={"/about"}>Giới thiệu</Link>
               </Navbar.Link>
-              <Navbar.Link className="lg:text-base" href="/contact">
-                Liên hệ
+              <Navbar.Link className="lg:text-base">
+                <Link to={"/contact"}>Liên hệ</Link>
               </Navbar.Link>
-              <Navbar.Link className="lg:text-base" href="/recruitment">
-                Tuyển dụng
+              <Navbar.Link className="lg:text-base">
+                <Link to={"/recruitment"}>Tuyển dụng</Link>
               </Navbar.Link>
             </Navbar.Collapse>
           </Navbar>
