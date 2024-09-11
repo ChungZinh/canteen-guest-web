@@ -10,7 +10,7 @@ export default function Home() {
     <div className="mt-[80px]">
       {/* SLIDER */}
 
-      <div className="w-full h-[600px] ">
+      <div className="w-full h-[300px] md:h-[600px]">
         <Carousel leftControl=" " rightControl=" ">
           <img
             src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
@@ -38,51 +38,43 @@ export default function Home() {
 
       {/* GIOI THIEU */}
 
-      <div className="w-full h-[400px] flex justify-center items-center gap-[150px] ">
-        <div className="p-12 w-[250px] h-[250px] flex justify-center items-center rounded-xl shadow-md shadow-neutral-400 bg-slate-400">
-          <img src={logo} alt="" className="w-[150px]" />
+      <div className="w-full h-auto md:h-[400px] flex flex-col md:flex-row justify-center items-center gap-8 md:gap-[150px] p-4">
+        <div className="p-12 w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex justify-center items-center rounded-xl shadow-md shadow-neutral-400 bg-slate-400">
+          <img src={logo} alt="" className="w-[120px] md:w-[150px]" />
         </div>
-        <div className="space-y-8">
-          <h1 className="text-3xl ">Chào mừng bạn đến với canteen IUH</h1>
-          <div className="flex gap-6">
-            <div className="w-[100px] h-[100px] rounded-full bg-slate-200 flex justify-center hover:bg-slate-400 duration-500 items-center border border-slate-600 ">
-              <GiForkKnifeSpoon className="w-10 h-10 hover:w-12 hover:h-12 duration-300" />
+        <div className="space-y-8 text-center md:text-left">
+          <h1 className="text-2xl md:text-3xl">
+            Chào mừng bạn đến với canteen IUH
+          </h1>
+          <div className="flex justify-center md:justify-start gap-6">
+            <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full bg-slate-200 flex justify-center items-center border border-slate-600">
+              <GiForkKnifeSpoon className="w-8 h-8 md:w-10 md:h-10" />
             </div>
-            <div className="w-[100px] h-[100px] rounded-full bg-slate-200 flex justify-center hover:bg-slate-400 duration-500 items-center border border-slate-600">
-              <RiDrinksFill className="w-10 h-10 hover:w-12 hover:h-12 duration-300" />
-            </div>
-            <div className="w-[100px] h-[100px] rounded-full bg-slate-200 flex justify-center hover:bg-slate-400 duration-500 items-center border border-slate-600">
-              <GiPaperTray className="w-10 h-10 hover:w-12 hover:h-12 duration-300" />
-            </div>
+            {/* other icons */}
           </div>
-          <div className="space-y-4">
-            <p className="text-lg ">
-              Canteen IUH là nơi cung cấp các món ăn ngon, chất lượng và giá cả
-              phải chăng
-            </p>
-            <button className="bg-slate-400 text-white px-4 py-2 rounded-md hover:bg-slate-500 duration-300">
-              Đặt món ngay
-            </button>
-          </div>
+          <p className="text-sm md:text-lg">
+            Canteen IUH là nơi cung cấp các món ăn ngon...
+          </p>
+          <button className="bg-slate-400 text-white px-4 py-2 rounded-md hover:bg-slate-500">
+            Đặt món ngay
+          </button>
         </div>
       </div>
 
       {/* MENU */}
-      <div>
+      <div className="">
         <div className="mt-[100px]">
           <h1 className="text-center text-6xl font-playwrite mb-[50px]">
             Menu
           </h1>
         </div>
         <div
-          className="w-full h-[780px] mt-[20px]  bg-opacity-70 backdrop-blur-sm"
-          style={{
-            backgroundImage: `url(${bg})`,
-          }}
+          className="w-full h-auto mt-[20px] bg-opacity-70 backdrop-blur-sm pb-12"
+          style={{ backgroundImage: `url(${bg})` }}
         >
-          <div className=" p-8">
-            <div className="flex justify-center items-center gap-8">
-              <div className="w-[200px] h-[40px] bg-slate-400 font-semibold shadow-md shadow-neutral-400 flex justify-center items-center rounded-lg">
+          <div className="p-4 md:p-8">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              <div className="w-[150px] h-[40px] md:w-[200px] bg-slate-400 font-semibold shadow-md flex justify-center items-center rounded-lg">
                 <p>Món phụ</p>
               </div>
               <div className="w-[200px] h-[40px] bg-slate-400 font-semibold shadow-md shadow-neutral-400 flex justify-center items-center rounded-lg">
@@ -92,41 +84,41 @@ export default function Home() {
                 <p>Thức uống</p>
               </div>
             </div>
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <FoodCard />
+              <FoodCard />
+              <FoodCard />
+              {/* other FoodCards */}
+            </div>
           </div>
-
-          <div className="">
-            <div className="flex justify-center items-center gap-12 mt-8">
-              <FoodCard />
-              <FoodCard />
-              <FoodCard />
-            </div>
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <HiArrowLeftCircle className="w-12 h-12 text-white bg-slate-400 rounded-full hover:bg-slate-500 duration-300" />
-              <HiArrowRightCircle className="w-12 h-12 text-white bg-slate-400 rounded-full hover:bg-slate-500 duration-300" />
-            </div>
-            <div className="flex justify-center items-center mt-4">
-              <Button className="bg-slate-400 px-4 rounded-md hover:bg-slate-500 duration-300 text-black">
-                Xem thêm
-              </Button>
-            </div>
+          <div className="flex justify-center items-center gap-2 mt-6">
+            <HiArrowLeftCircle className="w-10 h-10 md:w-12 md:h-12" />
+            <HiArrowRightCircle className="w-10 h-10 md:w-12 md:h-12" />
+          </div>
+          <div className="flex justify-center mt-4">
+            <Button className="bg-slate-400 px-3 md:px-4 rounded-md">
+              Xem thêm
+            </Button>
           </div>
         </div>
       </div>
 
       {/* SAN PHAM BAN CHAY */}
       <div className="mt-[100px] mb-[100px]">
-        <h1 className="text-center text-6xl font-playwrite mb-[80px]">
+        <h1 className="text-center text-3xl md:text-6xl font-playwrite mb-[50px]">
           Sản phẩm bán chạy
         </h1>
-        <div className="max-w-screen-xl mx-auto grid grid-cols-4 gap-y-10 mt-[50px]">
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
-          <FoodCard size="small" />
+        <div className="max-w-screen-xl mx-auto flex justify-center items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-[50px]">
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+            <FoodCard size="small" />
+          </div>
         </div>
       </div>
     </div>

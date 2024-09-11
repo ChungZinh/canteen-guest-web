@@ -12,7 +12,7 @@ export default function About() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 className="text-center text-6xl font-playwrite mb-[80px]">
+        <h1 className="text-center text-4xl lg:text-6xl font-playwrite mb-[80px]">
           Giới thiệu
         </h1>
       </div>

@@ -13,7 +13,7 @@ export default function Contact() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 className="text-center text-6xl font-playwrite mb-[80px]">
+        <h1 className="text-center text-4xl lg:text-6xl font-playwrite mb-[80px]">
           Liên Hệ
         </h1>
       </div>
@@ -31,8 +31,8 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="  p-6  rounded-lg max-w-screen-xl mx-auto flex justify-center items-center gap-12 my-[100px]">
-          <div className="w-1/2 border rounded-md p-4">
+        <div className="  p-6  rounded-lg max-w-screen-xl mx-auto flex lg:flex-row flex-col justify-center items-center gap-12 my-[100px] ">
+          <div className="lg:w-1/2 border rounded-md p-4">
             <h1 className="text-2xl text-center  font-semibold">Liên Hệ</h1>
             <HR.Trimmed />
             <div className="grid grid-cols-2 gap-4 mt-4">
@@ -60,7 +60,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="w-1/2 border rounded-md p-4">
+          <div className="lg:w-1/2 border rounded-md p-4">
             <h2 className="text-2xl font-semibold text-center mb-6">
               Gửi thắc mắc cho chúng tôi
             </h2>
